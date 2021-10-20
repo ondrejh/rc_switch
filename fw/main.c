@@ -24,7 +24,7 @@
 #define DIR (1<<8) // P2.0 = PA.8
 #define STEP (1<<9) // P2.1 = PA.9
 
-#define OUT_DISABLED 0x4000
+#define OUT_DISABLED 0x4004
 #define OUT_STEP_UP (OUT_DISABLED | EN | STEP)
 #define OUT_STEP_DOWN (OUT_DISABLED | EN)
 
@@ -64,12 +64,14 @@ int main(void)
     WDTCTL = WDTPW | WDTHOLD; // vypnout bafana
 	
 	// IOs (P1.7, P2.0, P2.1 OUT, P2.6 IN)
-	PADIR = 0x0380;
-	PAOUT = OUT_DISABLED;
+	PADIR = 0x08;
+	PAOUT = 0x08;
     PM5CTL0 &= ~LOCKLPM5; // aktivace nastaveni IO (magie)
 	
 	// nastaveni citace
 	TBCTL = 0x02E0; // SMCLK, Continuous mode, 1/8
+
+	while(1) {};
 
 	while(1) {
 		static uint16_t tim = 0; // casovac kroku

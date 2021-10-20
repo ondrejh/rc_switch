@@ -46,7 +46,8 @@ debug: all
 	$(GDB) $(DEVICE).out
 	
 program:
-	mspdebug rf2500 "prog $(TARGET).hex"
+	MSP430Flasher -i TIUSB -m SBW2 -g -n $(TARGETMCU) -e ERASE_ALL -w $(TARGET).hex -v -z [VCC]
+#	mspdebug rf2500 "prog $(TARGET).hex"
 
 program_win:
 	C:/ti/MSPFlasher_1.3.17/MSP430Flasher -i TIUSB -m SBW2 -g -n $(TARGETMCU) -e ERASE_ALL -w $(TARGET).hex -v -z [VCC]
