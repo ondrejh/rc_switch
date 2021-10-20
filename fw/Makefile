@@ -1,4 +1,4 @@
-TARGET=waxing
+TARGET=rc_switch
 
 MCU        = MSP430FR2000
 TARGETMCU  = $(MCU)
