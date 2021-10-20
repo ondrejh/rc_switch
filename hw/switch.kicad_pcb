@@ -205,7 +205,7 @@
     (fp_text reference Q1 (at 0 4.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 2SK2231 (at 0 -4.5) (layer B.Fab)
+    (fp_text value DMG4800LK3-13 (at 0 -4.5) (layer B.Fab)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 3.95 2.7) (end 4.95 2.7) (layer B.Fab) (width 0.1))
@@ -388,7 +388,7 @@
     (fp_text reference R1 (at 0 -1.43) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43) (layer F.Fab)
+    (fp_text value 12k (at 0 1.43) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4125) (end -0.8 -0.4125) (layer F.Fab) (width 0.1))
